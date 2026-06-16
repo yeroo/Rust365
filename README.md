@@ -1,6 +1,7 @@
 # rust365
 
 [![CI](https://github.com/yeroo/Rust365/actions/workflows/ci.yml/badge.svg)](https://github.com/yeroo/Rust365/actions/workflows/ci.yml)
+[![crates.io](https://img.shields.io/crates/v/rust365.svg)](https://crates.io/crates/rust365)
 [![Release](https://img.shields.io/github/v/release/yeroo/Rust365)](https://github.com/yeroo/Rust365/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/yeroo/Rust365/badge)](https://scorecard.dev/viewer/?uri=github.com/yeroo/Rust365)
@@ -21,6 +22,12 @@ rust365 <input.docx> [options]
   --title <t>    override the document title
   --quiet        suppress the timing summary
   --version      print version and exit
+```
+
+## Install
+
+```
+cargo install rust365
 ```
 
 ## What is supported
