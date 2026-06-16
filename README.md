@@ -1,10 +1,16 @@
 # rust365
 
+[![CI](https://github.com/yeroo/Rust365/actions/workflows/ci.yml/badge.svg)](https://github.com/yeroo/Rust365/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/yeroo/Rust365)](https://github.com/yeroo/Rust365/releases/latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/yeroo/Rust365/badge)](https://scorecard.dev/viewer/?uri=github.com/yeroo/Rust365)
+
 A fast, dependency-free converter from Microsoft Word `.docx` to HTML, in **Rust** —
 a complete port of [Fast365](https://github.com/yeroo/Fast365) (C++). Everything is
 from scratch: the ZIP reader, the DEFLATE decoder, the XML parser and the
-WordprocessingML-to-HTML conversion. No external crates; standard library only.
-Builds and runs on Windows and Linux.
+WordprocessingML-to-HTML conversion. No runtime dependencies (only a build-time
+crate that embeds Windows version metadata); the shipped binary is a single
+self-contained executable. Builds and runs on Windows and Linux.
 
 ```
 rust365 <input.docx> [options]

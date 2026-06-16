@@ -2,5 +2,24 @@
 name = "rust365"
 version = "0.1.0"
 edition = "2024"
+rust-version = "1.85"
+description = "A fast, dependency-free Microsoft Word .docx to HTML converter, in Rust."
+authors = ["yeroo"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/yeroo/Rust365"
+homepage = "https://github.com/yeroo/Rust365"
+keywords = ["docx", "html", "ooxml", "converter", "office"]
+categories = ["command-line-utilities", "text-processing"]
 
 [dependencies]
+
+# Build-only: embeds Windows version/publisher metadata into the .exe. Not linked
+# at runtime — the shipped binary is still a single self-contained executable.
+[target.'cfg(windows)'.build-dependencies]
+winresource = "0.1"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
